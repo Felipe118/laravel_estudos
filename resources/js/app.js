@@ -5,15 +5,15 @@
  */
 
 import './bootstrap';
-import { createApp } from 'vue';
+import { createApp, h } from 'vue';
 import { createInertiaApp, Link } from '@inertiajs/inertia-vue3';
-import { resolvePageComponet } from 'laravel-vite-plugin/inertia-helpers';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
 import '../css/app.css';
 
 createInertiaApp({
     resolve: (name) => 
-        resolvePageComponet(
+    resolvePageComponent(
             `./Pages/${name}.vue`,
             import.meta.glob("./Pages/**/*.vue")
         ) ,
@@ -31,10 +31,10 @@ createInertiaApp({
  * to use in your application's views. An example is included for you.
  */
 
-const app = createApp({});
+// const app = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
+// import ExampleComponent from './components/ExampleComponent.vue';
+// app.component('example-component', ExampleComponent);
 
 /**
  * The following block of code may be used to automatically register your
@@ -54,4 +54,4 @@ app.component('example-component', ExampleComponent);
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
 
-app.mount('#app');
+// app.mount('#app');

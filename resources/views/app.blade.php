@@ -7,7 +7,7 @@
     @inertiaHead
 </head>
 <body>
-    @inertiaHead
+    @inertia
     @vite('resources/js/app.js')
 </body>
 </html>
