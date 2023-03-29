@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LevantamentoIriController;
 use App\Http\Controllers\TesteController;
 use App\Jobs\LogsJobs;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,11 @@ Route::get('/', function () {
 });
 
 Route::get('/teste', [TesteController::class, 'index']);
+
+
+Route::get('/levantamento-iri', [LevantamentoIriController::class, 'index']);
+Route::post('/levantamento-iri', [LevantamentoIriController::class, 'store']);
+
 
 Route::get('/job-log', function () {
 
